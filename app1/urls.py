@@ -6,6 +6,5 @@ from . import views
 urlpatterns = [
     path('', views.Home),
     path('register/', views.Register),
-    # path('', django.contrib.auth.urls),
-    # path('login/', views.Login),
+    path('accounts/profile/', views.Profile),
 ]

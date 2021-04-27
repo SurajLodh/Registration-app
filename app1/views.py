@@ -16,20 +16,15 @@ def Register(response):
         form = ResgisterForm(response.POST)
         if form.is_valid():
             form.save()
-        return redirect('/')
+            return redirect('/login')
+        return redirect('/register')
     else:
         form = ResgisterForm()
 
     return render(response, 'register.html', {'form':form})
 
 
-# def Login(response):
-#     if response.method == "POST":
-#         form = ResgisterForm(response.POST)
-#         if form.is_valid():
-#             form.save()
-#         return redirect('/')
-#     else:
-#         form = ResgisterForm()
+def Profile(response):
+    
 
-#     return render(response, 'login.html')
+    return render(response, 'profile.html')
